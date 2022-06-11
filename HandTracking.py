@@ -40,9 +40,6 @@ def main():
     while True:
         success, image = capture.read()
         img = detector.find_hands(image)
-        #lmList = detector.findPosition(img)
-        #if len(lmList) != 0:
-        #     print(lmList[4])
         current_time = time.time()
         fps = 1 / (current_time - previous_time)
         previous_time = current_time
